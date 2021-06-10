@@ -5,14 +5,15 @@ EAPI=7
 
 DESCRIPTION="for of sm64ex"
 HOMEPAGE="https://github.com/KiritoDv/Moon64"
-SRC_URI="https://github.com/KiritoDv/Moon64/archive/refs/heads/master.zip"
+SRC_URI="https://github.com/LLONSIT/sdas/raw/main/${PN}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="media-libs/libsdl2 #dependencies
-        media-libs/glew"
+DEPEND="media-libs/libsdl2
+	media-libs/glew"
+
 
 S=${WORKDIR}
 
@@ -28,5 +29,7 @@ src_compile() {
 }
 
 src_install() {
-   mv Moon64-master/build/us_pc /$HOME/${PN}
+   mkdir /builds
+   rm -rf /builds/${PN}
+   mv Moon64-master/build/us_pc /builds/${PN}
 }
