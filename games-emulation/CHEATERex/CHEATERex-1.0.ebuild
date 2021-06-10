@@ -30,8 +30,8 @@ cp /opt/baserom.us.z64 /var/tmp/portage/games-emulation/CHEATERex-1.0/work/CHEAT
 }
 
 src_install() {
-   rm -rf /tmp/${P} #clean
-   mv CHEATERex-nightly/build/us_pc /$HOME/${PN} || die "Installation failed"
+   rm -rf /builds/${PN} #clean
+   mv CHEATERex-nightly/build/us_pc /builds/${PN} || die "Installation failed"
 }
 
 
