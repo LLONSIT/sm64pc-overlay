@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 src_compile() {
- cp /opt/baserom.us.z64 /var/tmp/portage/games-emulation/CHATERex-1.0/CHEATERex-nightly 
+ cp /opt/baserom.us.z64 /var/tmp/portage/games-emulation/CHATERex-1.0/work/
  cd CHEATERex-nightly
  if [[ -f Makefile ]] || [[ -f GNUmakefile ]] || [[ -f makefile ]]; then
 		emake || die "emake failed"
