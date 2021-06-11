@@ -27,10 +27,10 @@ src_compile() {
 }
 
 src_install() {
-rm -rf /$HOME/${PN} 
-mv Render96ex-alpha/build/us_pc /opt/${PN}
+rm -rf /builds/${PN} 
+mv Render96ex-alpha/build/us_pc /builds/${PN}
 }
 
 pkg_postinst() {
- elog "Your build will be in /op"
+ elog "Your build will be on /builds"
 }

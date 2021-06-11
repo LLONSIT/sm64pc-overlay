@@ -29,5 +29,5 @@ src_compile() {
  
 
 src_install() {
- mv sm64ex-master/build/us_pc /$HOME/${PN}
+ mv sm64ex-master/build/us_pc /builds/${PN}
 }

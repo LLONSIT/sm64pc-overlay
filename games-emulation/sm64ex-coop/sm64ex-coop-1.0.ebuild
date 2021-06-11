@@ -29,10 +29,10 @@ if [[ -f Makefile ]] || [[ -f GNUmakefile ]] || [[ -f makefile ]]; then
 }
 
 src_install() {
-rm /opt/${PN}
-mv sm64ex-coop-coop/build/us_pc /opt/${PN}
+rm /builds/${PN}
+mv sm64ex-coop-coop/build/us_pc /builds/${PN}
 }
 
 pkg_postinst() {
- elog "the build will be in /opt"
+ elog "the build will be on /opt"
 }
