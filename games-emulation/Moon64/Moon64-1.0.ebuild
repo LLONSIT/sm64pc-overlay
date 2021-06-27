@@ -3,9 +3,9 @@
 
 EAPI=7
 
-DESCRIPTION="for of sm64ex"
+DESCRIPTION="An SM64 for with external addon support"
 HOMEPAGE="https://github.com/KiritoDv/Moon64"
-SRC_URI="https://github.com/KiritoDv/Moon64/archive/refs/heads/feature-testing.zip"
+SRC_URI="https://github.com/LLONSIT/packages/raw/master/${PN}.tar.xz"
 
 
 LICENSE="GPL-2"
@@ -30,7 +30,5 @@ src_compile() {
 }
 
 src_install() {
-   mkdir /builds
-   rm -rf /builds/${PN}
-   mv Moon64-feature-testing/build/us_pc /builds/${PN}
+  sh install.sh
 }
